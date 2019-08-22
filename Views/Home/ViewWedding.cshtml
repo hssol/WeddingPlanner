@@ -1,0 +1,11 @@
+<h1>@ViewBag.wedding.WedderOne and @ViewBag.wedding.WedderTwo's Wedding</h1> | <a href="/dashboard">Dashboard</a> | <a href="/logout">Log Out</a>
+<br>
+<h4>Date: @ViewBag.wedding.Date.ToString("MMM dd, yyyy, hh tt")</h4>
+<br>
+<h4>Guests:</h4>
+@{
+    foreach(var wedding in ViewBag.wedding.GuestList)
+    {
+        <p>@wedding.User.FirstName @wedding.User.LastName</p>
+    }
+}
